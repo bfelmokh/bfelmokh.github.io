@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elmokhtar - Application Integration Engineer</title>
+    <title>Elmokhtar - Consultant/Ingénieur Intégration Applicative</title>
     <style>
         * {
             margin: 0;
@@ -100,8 +100,8 @@
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
 
         .skill-category {
@@ -118,19 +118,8 @@
         }
 
         .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 5px 0;
             color: #555;
             font-size: 14px;
-        }
-
-        .skill-list li:before {
-            content: "▸ ";
-            color: #667eea;
-            font-weight: bold;
         }
 
         .contact-info {
@@ -195,23 +184,26 @@
         }
 
         .responsibilities {
-            list-style: none;
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 15px;
         }
 
         .responsibilities li {
             margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
             color: #444;
             font-size: 15px;
         }
 
-        .responsibilities li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #27ae60;
-            font-weight: bold;
+        .sub-responsibilities {
+            list-style: circle;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .sub-responsibilities li {
+            margin-bottom: 5px;
+            font-size: 14px;
         }
 
         .tech-stack {
@@ -226,21 +218,6 @@
             margin-bottom: 10px;
         }
 
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .tech-tag {
-            background: #667eea;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
         .certification {
             background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
             padding: 15px;
@@ -253,6 +230,12 @@
             font-weight: bold;
             color: #27ae60;
             margin-bottom: 5px;
+        }
+
+        .cert-details {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
         }
 
         .projects {
@@ -272,6 +255,16 @@
             margin-bottom: 10px;
         }
 
+        .project ul {
+            list-style: circle;
+            margin-left: 20px;
+        }
+
+        .project ul li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 grid-template-columns: 1fr;
@@ -281,10 +274,6 @@
             
             .sidebar {
                 position: static;
-            }
-            
-            .skills-grid {
-                grid-template-columns: 1fr;
             }
         }
 
@@ -313,180 +302,304 @@
             <div class="profile-header">
                 <div class="profile-img">E</div>
                 <div class="name">Elmokhtar</div>
-                <div class="title">Application Integration Engineer</div>
-                <div class="experience-years">7 Years Experience</div>
+                <div class="title">Consultant/Ingénieur Intégration Applicative</div>
+                <div class="experience-years">7 ans d'expérience</div>
             </div>
 
             <div class="contact-info">
                 <div class="contact-item">
                     <span class="contact-icon">📧</span>
-                    <span>Available upon request</span>
+                    <span>Disponible sur demande</span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
-                    <span>Tunis, Tunisia</span>
+                    <span>Tunis, Tunisie</span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">💼</span>
-                    <span>Open to opportunities</span>
+                    <span>Ouvert aux opportunités</span>
                 </div>
             </div>
 
             <div class="section">
-                <h3>Core Competencies</h3>
+                <h3>Compétences</h3>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h4>Integration & Automation</h4>
-                        <ul class="skill-list">
-                            <li>Control-M</li>
-                            <li>Azure DevOps</li>
-                            <li>GoAnywhere MFT</li>
-                            <li>CI/CD Pipelines</li>
-                        </ul>
+                        <h4>Compétences fonctionnelles</h4>
+                        <div class="skill-list">
+                            Intégration applicative • Automatisation des workflows • Support N2/N3 • Administration système • Gestion des incidents • Migration et mise à niveau • Documentation technique
+                        </div>
                     </div>
                     <div class="skill-category">
-                        <h4>Technologies</h4>
-                        <ul class="skill-list">
-                            <li>Java / .NET</li>
-                            <li>PowerShell / Shell</li>
-                            <li>Linux / Windows</li>
-                            <li>Apache Tomcat</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Databases & Tools</h4>
-                        <ul class="skill-list">
-                            <li>MS SQL Server</li>
-                            <li>Oracle SGBD</li>
-                            <li>JIRA / HEAT</li>
-                            <li>Git / Nexus</li>
-                        </ul>
+                        <h4>Compétences techniques</h4>
+                        <div class="skill-list">
+                            Control-M • Azure DevOps • GoAnywhere MFT • Unit4 CODA • Atlassian JIRA • IIS • Apache Tomcat • JAVA • .NET • SFTP • MSSQL • Linux/Windows • PowerShell • Shell • SSL
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="section">
-                <h3>Certifications</h3>
+                <h3>Formations & Certifications</h3>
                 <div class="certification">
                     <div class="cert-year">2024</div>
-                    <div>OpenShift DO180 & DO280</div>
+                    <div>Formation OpenShift DO180 & DO280</div>
+                    <div class="cert-details">ID Credly: b5609ed9-1d7a-4662-9a98-4c7d0aa5cfb2 & a25f6428-8239-4095-b749-4fd412cdce0a</div>
                 </div>
                 <div class="certification">
                     <div class="cert-year">2023</div>
-                    <div>AZ-400: Microsoft DevOps</div>
+                    <div>Formation AZ-400: Conception et implémentation de solutions Microsoft DevOps</div>
                 </div>
                 <div class="certification">
                     <div class="cert-year">2020</div>
-                    <div>MTA Java Programming</div>
+                    <div>Formation Programming essentials in Python</div>
+                    <div class="cert-details">ID CISCO: e13f06b1-2f04-45c4-8e6a-d667512b5e6c</div>
+                </div>
+                <div class="certification">
+                    <div class="cert-year">2020</div>
+                    <div>Formation MTA : Introduction to Programming using JAVA</div>
+                    <div class="cert-details">ID CREDLY: ebdc0e16-8584-4825-8f65-e1be79154194</div>
                 </div>
                 <div class="certification">
                     <div class="cert-year">2019</div>
-                    <div>ITIL 4 Foundation</div>
+                    <div>Formation & Certification ITIL 4 Foundation</div>
+                    <div class="cert-details">ID People cert: GR671062399EB</div>
                 </div>
                 <div class="certification">
                     <div class="cert-year">2019</div>
-                    <div>Google Cloud Platform</div>
+                    <div>Formation Google Cloud Platform Essential</div>
+                    <div class="cert-details">ID du badge Google: acbbfba9-da91-4122-8cd3-50aae8935bc9</div>
                 </div>
             </div>
         </div>
 
         <div class="main-content fade-in">
             <div class="section">
-                <h3>Professional Experience</h3>
+                <h3>Expériences Professionnelles</h3>
                 
                 <div class="job hover-effect">
                     <div class="job-header">
-                        <div class="job-title">Application Integration Engineer</div>
+                        <div class="job-title">Ingénieur Intégration Applicative</div>
                         <div class="company">ODDO BHF</div>
-                        <div class="job-period">June 2022 - Present</div>
+                        <div class="job-period">Depuis Juin 2022</div>
                     </div>
                     <div class="job-description">
-                        Leading application integration and automation initiatives within the Business Applications Integration team at ODDO BHF Tunis DSI, ensuring N2/N3 application support, administration, and implementation of automation solutions for business continuity.
+                        <strong>Contexte :</strong> Au sein de l'équipe Intégration des applications Business de la DSI ODDO BHF Tunis, j'ai assuré le support applicatif N2/N3 et l'administration des applications du Groupe, incluant l'installation, la mise à jour des ressources, l'industrialisation et le suivi des traitements, la gestion des incidents, ainsi que la mise en œuvre de solutions d'automatisation et de continuité d'activité.
                     </div>
-                    <ul class="responsibilities">
-                        <li>Automated business application workflows using Control-M, including script creation, scheduling, and monitoring</li>
-                        <li>Managed incidents, service requests, upgrades, and migrations for applications hosted on Linux/Windows environments</li>
-                        <li>Implemented and maintained continuous delivery pipelines with Azure DevOps</li>
-                        <li>Managed secure file transfer workflows with GoAnywhere MFT</li>
-                        <li>Collaborated with development, infrastructure, and business teams for quality application integration</li>
-                        <li>Remediated vulnerabilities identified by Tenable security scanning tool</li>
-                    </ul>
                     
+                    <strong>Tâches Réalisées :</strong>
+                    <ul class="responsibilities">
+                        <li>Automatisation des workflows d'applications métier avec Control-M, incluant la création de scripts, la planification et la supervision :
+                            <ul class="sub-responsibilities">
+                                <li>Création des jobs, scripts cmd/powershell et chaines.</li>
+                                <li>Déploiement en Dev, Integ, UAT, Sim et mise en production.</li>
+                            </ul>
+                        </li>
+                        <li>Gestion des incidents, des demandes de service, des mises à niveau, des migrations, et la coordination des changements pour les applications hébergées sur des environnements Linux/Windows (Unit4 Coda, Atlassian Jira, SI-OBAM et des applications .NET développées en interne) à travers HEAT :
+                            <ul class="sub-responsibilities">
+                                <li>Résolution des incidents N2/N3.</li>
+                                <li>Planification et implémentation des changes (passage Dev/UAT/prod).</li>
+                                <li>Refresh des environnements production vers non-production.</li>
+                                <li>La veille sur la validité des certificats SSL.</li>
+                            </ul>
+                        </li>
+                        <li>Mise en œuvre et maintenance des pipelines de livraison continue (CD) avec Azure DevOps :
+                            <ul class="sub-responsibilities">
+                                <li>Installation et maintien des agents CD.</li>
+                                <li>Création et livraison à travers les pipelines Azure en se basant sur GIT & NEXUS.</li>
+                            </ul>
+                        </li>
+                        <li>Gestion des flux de transfert de fichiers sécurisés avec GoAnywhere MFT :
+                            <ul class="sub-responsibilities">
+                                <li>Conception des projets pour les nouveaux flux.</li>
+                                <li>Maintien des anciens flux.</li>
+                            </ul>
+                        </li>
+                        <li>Collaboration étroite avec les équipes de développement, d'infrastructure et métier pour garantir une intégration et une livraison des applications de qualité.</li>
+                        <li>Remédiation des vulnérabilités découvertes par l'outil Tenable :
+                            <ul class="sub-responsibilities">
+                                <li>Etude et analyse des vulnérabilités selon leur sévérité.</li>
+                                <li>Planification et implémentation de la résolution</li>
+                            </ul>
+                        </li>
+                        <li>Rédaction et gestion des documents :
+                            <ul class="sub-responsibilities">
+                                <li>Création et mise à jour des DEX / DAT.</li>
+                                <li>Rectification des applications et de leurs flux réseaux sur TUFIN.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
                     <div class="projects">
-                        <h4>Key Projects:</h4>
+                        <h4>Projets :</h4>
                         <div class="project">
-                            <h4>UNIT4 Coda Migration</h4>
-                            <p>Led complete migration to version 15 with Wildfly/Java, including database migration from SQL Server 2008 to 2019 and Control-M job migration.</p>
+                            <h4>Migration d'application UNIT4 Coda :</h4>
+                            <ul>
+                                <li>Préparation technique des serveurs.</li>
+                                <li>Installation de la nouvelle version 15 (basée sur Wildfly / Java).</li>
+                                <li>Migration de la base de données depuis SQL Server 2008 vers 2019.</li>
+                                <li>Migration des jobs Control-M.</li>
+                                <li>Décomposition de la production actuelle avec les applications satellites connectées.</li>
+                                <li>Configuration du monitoring sur Centreon.</li>
+                            </ul>
                         </div>
                         <div class="project">
-                            <h4>ADJUTO Integration</h4>
-                            <p>End-to-end integration of new application including server preparation, installation, Control-M configuration, and monitoring setup.</p>
+                            <h4>Intégration d'une nouvelle application ADJUTO :</h4>
+                            <ul>
+                                <li>Préparation de prérequis serveurs Windows et flux réseaux.</li>
+                                <li>Installation de l'application (DB, APP et WEB).</li>
+                                <li>Création du plan de production et jobs Control-M.</li>
+                                <li>Gestion des accès utilisateurs.</li>
+                                <li>Rédaction de la documentation (CMDB, DEX, DAT).</li>
+                                <li>Configuration du monitoring sur Centreon.</li>
+                            </ul>
                         </div>
                         <div class="project">
-                            <h4>Control-M Optimization</h4>
-                            <p>Standardized and optimized Control-M jobs following version 9 migration best practices.</p>
+                            <h4>Optimisation et standardisation des Jobs Control-M :</h4>
+                            <ul>
+                                <li>Analyse et étude des jobs existants.</li>
+                                <li>Planification et migration des jobs selon les nouvelles bonnes pratiques</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h4>Migration des flux SFTP :</h4>
+                            <ul>
+                                <li>Analyse des flux existants.</li>
+                                <li>Prise de contact avec les différents partenaires (JPMORGAN, MarketAcess, LSEG, MSCI, Factset, ...).</li>
+                                <li>Planification et migration des flux (Jobs Control-M + configuration Réseau/plateforme).</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h4>Control-M Job as Code (POC) :</h4>
+                            <ul>
+                                <li>Mise à disposition des templates Job as code.</li>
+                                <li>Création de pipeline Azure pour les delivery à travers les API CTM.</li>
+                                <li>Proposition d'architecture cible Job/Folder/ENV.</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="tech-stack">
-                        <h4>Technology Stack:</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Unit4 CODA</span>
-                            <span class="tech-tag">Atlassian JIRA</span>
-                            <span class="tech-tag">Control-M</span>
-                            <span class="tech-tag">Azure DevOps</span>
-                            <span class="tech-tag">GoAnywhere</span>
-                            <span class="tech-tag">MS SQL</span>
-                            <span class="tech-tag">.NET</span>
-                            <span class="tech-tag">Java</span>
-                        </div>
+                        <h4>Environnement Technique :</h4>
+                        Unit4 CODA, Atlassian JIRA, Ivanti HEAT, Control-M, IIS, SSL, Apache Tomcat, JAVA, .NET, GoAnywhere, SFTP, MSSQL, Azure DevOps
                     </div>
                 </div>
 
                 <div class="job hover-effect">
                     <div class="job-header">
-                        <div class="job-title">Operations Consultant → Integration Delivery Team Deputy</div>
+                        <div class="job-title">Consultant Exploitation → Adjoint d'équipe "Integration Delivery & Key Accounts"</div>
                         <div class="company">Sopra HR Software</div>
-                        <div class="job-period">February 2018 - May 2022</div>
+                        <div class="job-period">De Février 2018 à Mai 2022</div>
                     </div>
                     <div class="job-description">
-                        Evolved from Operations Consultant to Deputy of the strategic "Integration Delivery & Key Accounts" team within PRODOPS department, managing critical HR solution deployments and automation implementations for strategic client accounts.
+                        <strong>Contexte :</strong> Au sein du département PRODOPS (Production Operations) de Sopra HR Software, j'ai évolué dans un parcours professionnel enrichissant qui m'a mené de l'équipe Exploitation vers l'équipe stratégique "Integration Delivery & Key Accounts". Mon parcours a débuté en tant que consultant d'exploitation et technicien spécialisé, où j'assurais l'exploitation et la supervision des environnements clients de production HrAccess hébergés sur l'infrastructure d'outsourcing. Cette expertise opérationnelle m'a permis d'acquérir une compréhension approfondie des enjeux critiques de disponibilité et de performance des solutions RH. Et m'a permis de prendre le rôle d'un team lead. Ensuite, grâce à mes compétences techniques et ma capacité d'adaptation, j'ai été promu adjoint de l'équipe Integration Delivery & Key Accounts, devenant garant de l'excellence dans la livraison, la maintenance et l'implémentation des solutions d'automatisation.
                     </div>
+                    
+                    <strong>Tâches Réalisées :</strong>
                     <ul class="responsibilities">
-                        <li><strong>Technical Support Specialist (Feb 2018):</strong> Production environment monitoring, N1/N2 incident resolution, and production schedule control</li>
-                        <li><strong>Team Leader (Nov 2019):</strong> Team technical reference, new hire integration, Dollar Universe agent upgrades, and automation script development</li>
-                        <li><strong>IDKA Deputy (Mar 2021):</strong> HrAccess/eDSN automation, product updates management across 180+ environments, and N3 incident resolution</li>
-                        <li>Served as CTO for two strategic client accounts with regular coordination meetings</li>
+                        <li><strong>Technicien Support Technique (Exploitation) (Février 2018)</strong>
+                            <ul class="sub-responsibilities">
+                                <li>Supervision de l'environnement de production (infrastructure et applications métier) à travers Hyperic et Zabbix.</li>
+                                <li>Gestion des incidents de niveaux 1 et 2 : analyse et résolution :
+                                    <ul>
+                                        <li>Libération des ressources CPU/RAM et DISK sous Linux.</li>
+                                        <li>Diagnostique des erreurs pour les flux FTP/SFTP/CFT.</li>
+                                        <li>Analyse des anomalies techniques liées au cycle de paie.</li>
+                                    </ul>
+                                </li>
+                                <li>Traitement des demandes et contrôle de la bonne exécution des plannings de production :
+                                    <ul>
+                                        <li>Suivi des colis chez les partenaires Digipost/Docapost.</li>
+                                        <li>Suivi du cycle de paie HR Access (contrôle, paie, virement, bulletin).</li>
+                                        <li>Refresh des données (production vers non-production).</li>
+                                    </ul>
+                                </li>
+                                <li>Assurer le suivi des évolutions de la documentation d'exploitation et du plan de production.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Team Leader Exploitation (Novembre 2019)</strong>
+                            <ul class="sub-responsibilities">
+                                <li>Référent technique de l'équipe :
+                                    <ul>
+                                        <li>Encadrement et intégration des nouveaux embauchés.</li>
+                                        <li>Montée en compétence.</li>
+                                    </ul>
+                                </li>
+                                <li>Mise à niveau des agents de planification Dollar Universe.</li>
+                                <li>Élaboration et documentation des procédures pour les nouveaux types de demandes/incidents.</li>
+                                <li>Conception et déploiement de scripts Shell pour automatiser les tâches quotidiennes d'exploitation.</li>
+                                <li>Contribution à la fiabilisation des processus, réduction des interventions manuelles et gain de productivité des équipes.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Adjoint de l'équipe IDKA (mars 2021)</strong>
+                            <ul class="sub-responsibilities">
+                                <li>Automatisation des tâches planifiées (chaînes de paie HrAccess/eDSN et mises à jour de version) :
+                                    <ul>
+                                        <li>Optimisation des scripts shell.</li>
+                                        <li>Standardisation des fonctions et scripts à disposition.</li>
+                                        <li>Contrôle de qualité sur les nouveaux scripts.</li>
+                                    </ul>
+                                </li>
+                                <li>Gestion des mises à jour de produit HrAccess et eDSN :
+                                    <ul>
+                                        <li>Planification dev, uat et prod sur plus de 180 environnements.</li>
+                                        <li>Mise en place de scripts pour le lancement et le suivi des upgrades/releases en environnement de production.</li>
+                                    </ul>
+                                </li>
+                                <li>Création et migration d'environnements (Dev / UAT / PROD) :
+                                    <ul>
+                                        <li>Approvisionnement de ressources.</li>
+                                        <li>Gestion des flux réseaux.</li>
+                                        <li>Installation et configuration des services (OpenLDAP, Apache Tomcat, OpenHR, Query).</li>
+                                        <li>Création de la base de données Oracle.</li>
+                                    </ul>
+                                </li>
+                                <li>Résolution des incidents de niveau 3 :
+                                    <ul>
+                                        <li>Bug produits et patch correctifs.</li>
+                                        <li>Mise à disposition des stratégies pour la remédiation des vulnérabilités touchant la plateforme.</li>
+                                    </ul>
+                                </li>
+                                <li>CTO sur deux comptes clients :
+                                    <ul>
+                                        <li>Réfèrent technique Privilège.</li>
+                                        <li>Coordinateur sur des réunions régulières.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
 
                     <div class="projects">
-                        <h4>Key Projects:</h4>
+                        <h4>Projets :</h4>
                         <div class="project">
-                            <h4>HrAccess Release Deployment</h4>
-                            <p>Developed shell scripts for rapid release deployment with client/environment-specific strategies.</p>
+                            <h4>Déploiement des releases HrAccess et espace DSN :</h4>
+                            <ul>
+                                <li>Développement des scripts shell permettant le déploiement rapide d'une nouvelle release.</li>
+                                <li>Mise en place de stratégie de déploiement par collaborateur/client/environnement.</li>
+                            </ul>
                         </div>
                         <div class="project">
-                            <h4>Process Industrialization</h4>
-                            <p>Created log correlation scripts, incident resolution aids, and Python/Selenium automation for availability testing.</p>
+                            <h4>Industrialisation et optimisation des processus d'exploitation :</h4>
+                            <ul>
+                                <li>Développement du script shell de corrélation des logs applicatifs pour le suivi de performance.</li>
+                                <li>Mise en place d'un script d'aide à la résolution des incidents N1 et N2 récurrents.</li>
+                                <li>Développement des scripts robots Python/Sélénium pour les tests de disponibilité/accessibilité durant les tests à blanc pour le plan de continuité d'activité et les interventions d'infrastructure planifiées.</li>
+                                <li>Création des scripts d'activation / désactivation de monitoring durant les opérations planifiées.</li>
+                            </ul>
                         </div>
                         <div class="project">
-                            <h4>FTP to SFTP Migration</h4>
-                            <p>Updated file transfer scripts and managed client migrations to secure protocols.</p>
+                            <h4>Migration FTP to SFTP :</h4>
+                            <ul>
+                                <li>Mise à jour des scripts de transfert des fichiers dans Dollar Universe.</li>
+                                <li>Migration des comptes clients.</li>
+                            </ul>
                         </div>
                     </div>
 
                     <div class="tech-stack">
-                        <h4>Technology Stack:</h4>
-                        <div class="tech-tags">
-                            <span class="tech-tag">HrAccess</span>
-                            <span class="tech-tag">Dollar Universe</span>
-                            <span class="tech-tag">Apache Tomcat</span>
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Oracle SGBD</span>
-                            <span class="tech-tag">Linux</span>
-                            <span class="tech-tag">LDAP</span>
-                            <span class="tech-tag">Python</span>
-                        </div>
+                        <h4>Environnement Technique :</h4>
+                        Hr Access, JIRA, EasyVISTA, DollarUniverse ($u), Apache Tomcat, Java, CFT, SFTP, Linux, LDAP, Oracle SGBD
                     </div>
                 </div>
             </div>
@@ -508,16 +621,6 @@
             // Observe all major sections
             document.querySelectorAll('.job, .certification, .skill-category').forEach(el => {
                 observer.observe(el);
-            });
-
-            // Add click animation to tech tags
-            document.querySelectorAll('.tech-tag').forEach(tag => {
-                tag.addEventListener('click', function() {
-                    this.style.transform = 'scale(1.1)';
-                    setTimeout(() => {
-                        this.style.transform = 'scale(1)';
-                    }, 150);
-                });
             });
         });
     </script>
