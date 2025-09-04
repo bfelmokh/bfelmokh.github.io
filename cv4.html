@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elmokhtar - Application Integration Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+            position: sticky;
+            top: 20px;
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+
+        .experience-years {
+            font-size: 16px;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 5px 0;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .skill-list li:before {
+            content: "▸ ";
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .contact-icon {
+            width: 20px;
+            margin-right: 10px;
+            color: #667eea;
+        }
+
+        .job {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
+        .job-header {
+            margin-bottom: 15px;
+        }
+
+        .job-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 18px;
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .job-period {
+            font-size: 14px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .job-description {
+            margin-bottom: 15px;
+            color: #555;
+            font-style: italic;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 8px;
+        }
+
+        .responsibilities {
+            list-style: none;
+        }
+
+        .responsibilities li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #444;
+            font-size: 15px;
+        }
+
+        .responsibilities li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .tech-stack {
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(103, 126, 234, 0.1);
+            border-radius: 8px;
+        }
+
+        .tech-stack h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .certification {
+            background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .cert-year {
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 5px;
+        }
+
+        .projects {
+            margin-top: 20px;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        .project h4 {
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 10px;
+            }
+            
+            .sidebar {
+                position: static;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hover-effect {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-effect:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar fade-in">
+            <div class="profile-header">
+                <div class="profile-img">E</div>
+                <div class="name">Elmokhtar</div>
+                <div class="title">Application Integration Engineer</div>
+                <div class="experience-years">7 Years Experience</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>Available upon request</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <span>Tunis, Tunisia</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💼</span>
+                    <span>Open to opportunities</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Core Competencies</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Integration & Automation</h4>
+                        <ul class="skill-list">
+                            <li>Control-M</li>
+                            <li>Azure DevOps</li>
+                            <li>GoAnywhere MFT</li>
+                            <li>CI/CD Pipelines</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Technologies</h4>
+                        <ul class="skill-list">
+                            <li>Java / .NET</li>
+                            <li>PowerShell / Shell</li>
+                            <li>Linux / Windows</li>
+                            <li>Apache Tomcat</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Databases & Tools</h4>
+                        <ul class="skill-list">
+                            <li>MS SQL Server</li>
+                            <li>Oracle SGBD</li>
+                            <li>JIRA / HEAT</li>
+                            <li>Git / Nexus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Certifications</h3>
+                <div class="certification">
+                    <div class="cert-year">2024</div>
+                    <div>OpenShift DO180 & DO280</div>
+                </div>
+                <div class="certification">
+                    <div class="cert-year">2023</div>
+                    <div>AZ-400: Microsoft DevOps</div>
+                </div>
+                <div class="certification">
+                    <div class="cert-year">2020</div>
+                    <div>MTA Java Programming</div>
+                </div>
+                <div class="certification">
+                    <div class="cert-year">2019</div>
+                    <div>ITIL 4 Foundation</div>
+                </div>
+                <div class="certification">
+                    <div class="cert-year">2019</div>
+                    <div>Google Cloud Platform</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content fade-in">
+            <div class="section">
+                <h3>Professional Experience</h3>
+                
+                <div class="job hover-effect">
+                    <div class="job-header">
+                        <div class="job-title">Application Integration Engineer</div>
+                        <div class="company">ODDO BHF</div>
+                        <div class="job-period">June 2022 - Present</div>
+                    </div>
+                    <div class="job-description">
+                        Leading application integration and automation initiatives within the Business Applications Integration team at ODDO BHF Tunis DSI, ensuring N2/N3 application support, administration, and implementation of automation solutions for business continuity.
+                    </div>
+                    <ul class="responsibilities">
+                        <li>Automated business application workflows using Control-M, including script creation, scheduling, and monitoring</li>
+                        <li>Managed incidents, service requests, upgrades, and migrations for applications hosted on Linux/Windows environments</li>
+                        <li>Implemented and maintained continuous delivery pipelines with Azure DevOps</li>
+                        <li>Managed secure file transfer workflows with GoAnywhere MFT</li>
+                        <li>Collaborated with development, infrastructure, and business teams for quality application integration</li>
+                        <li>Remediated vulnerabilities identified by Tenable security scanning tool</li>
+                    </ul>
+                    
+                    <div class="projects">
+                        <h4>Key Projects:</h4>
+                        <div class="project">
+                            <h4>UNIT4 Coda Migration</h4>
+                            <p>Led complete migration to version 15 with Wildfly/Java, including database migration from SQL Server 2008 to 2019 and Control-M job migration.</p>
+                        </div>
+                        <div class="project">
+                            <h4>ADJUTO Integration</h4>
+                            <p>End-to-end integration of new application including server preparation, installation, Control-M configuration, and monitoring setup.</p>
+                        </div>
+                        <div class="project">
+                            <h4>Control-M Optimization</h4>
+                            <p>Standardized and optimized Control-M jobs following version 9 migration best practices.</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h4>Technology Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Unit4 CODA</span>
+                            <span class="tech-tag">Atlassian JIRA</span>
+                            <span class="tech-tag">Control-M</span>
+                            <span class="tech-tag">Azure DevOps</span>
+                            <span class="tech-tag">GoAnywhere</span>
+                            <span class="tech-tag">MS SQL</span>
+                            <span class="tech-tag">.NET</span>
+                            <span class="tech-tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job hover-effect">
+                    <div class="job-header">
+                        <div class="job-title">Operations Consultant → Integration Delivery Team Deputy</div>
+                        <div class="company">Sopra HR Software</div>
+                        <div class="job-period">February 2018 - May 2022</div>
+                    </div>
+                    <div class="job-description">
+                        Evolved from Operations Consultant to Deputy of the strategic "Integration Delivery & Key Accounts" team within PRODOPS department, managing critical HR solution deployments and automation implementations for strategic client accounts.
+                    </div>
+                    <ul class="responsibilities">
+                        <li><strong>Technical Support Specialist (Feb 2018):</strong> Production environment monitoring, N1/N2 incident resolution, and production schedule control</li>
+                        <li><strong>Team Leader (Nov 2019):</strong> Team technical reference, new hire integration, Dollar Universe agent upgrades, and automation script development</li>
+                        <li><strong>IDKA Deputy (Mar 2021):</strong> HrAccess/eDSN automation, product updates management across 180+ environments, and N3 incident resolution</li>
+                        <li>Served as CTO for two strategic client accounts with regular coordination meetings</li>
+                    </ul>
+
+                    <div class="projects">
+                        <h4>Key Projects:</h4>
+                        <div class="project">
+                            <h4>HrAccess Release Deployment</h4>
+                            <p>Developed shell scripts for rapid release deployment with client/environment-specific strategies.</p>
+                        </div>
+                        <div class="project">
+                            <h4>Process Industrialization</h4>
+                            <p>Created log correlation scripts, incident resolution aids, and Python/Selenium automation for availability testing.</p>
+                        </div>
+                        <div class="project">
+                            <h4>FTP to SFTP Migration</h4>
+                            <p>Updated file transfer scripts and managed client migrations to secure protocols.</p>
+                        </div>
+                    </div>
+
+                    <div class="tech-stack">
+                        <h4>Technology Stack:</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HrAccess</span>
+                            <span class="tech-tag">Dollar Universe</span>
+                            <span class="tech-tag">Apache Tomcat</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Oracle SGBD</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">LDAP</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add smooth scrolling and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add fade-in animation to elements as they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            });
+
+            // Observe all major sections
+            document.querySelectorAll('.job, .certification, .skill-category').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Add click animation to tech tags
+            document.querySelectorAll('.tech-tag').forEach(tag => {
+                tag.addEventListener('click', function() {
+                    this.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1)';
+                    }, 150);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
